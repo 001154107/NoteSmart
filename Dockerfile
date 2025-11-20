@@ -33,9 +33,8 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Create public directory if it doesn't exist, then copy if exists
-RUN mkdir -p public
-COPY --from=builder --chown=nextjs:nodejs /app/public* ./public/ || true
+# Copy public folder contents if it exists
+COPY --from=builder --chown=nextjs:nodejs /app/public/ ./public/
 
 # Copy the standalone output
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
