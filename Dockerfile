@@ -27,14 +27,13 @@ RUN npm run build
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy public folder contents if it exists
-COPY --from=builder --chown=nextjs:nodejs /app/public/ ./public/
+
 
 # Copy the standalone output
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
@@ -44,8 +43,8 @@ USER nextjs
 
 EXPOSE 3000
 
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 
 # Run the application
-CMD ["node", "server.js"]
+CMD ["node", ".next/standalone/server.js"]
