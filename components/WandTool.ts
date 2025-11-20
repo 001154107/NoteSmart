@@ -1,71 +1,166 @@
-import { StateNode, TLEventHandlers } from 'tldraw'
+import {
+	pointInPolygon,
+	polygonsIntersect,
+	StateNode,
+	TLPointerEventInfo,
+	TLShape,
+	VecModel,
+	Box,
+} from 'tldraw'
+import { lassoPointsAtom } from './wandAtoms'
+
+export class WandTool extends StateNode {
+	static override id = 'wand'
+	static override children() {
+		return [WandIdle, WandLassoing]
+	}
+	static override initial = 'idle'
+}
 
 export class WandIdle extends StateNode {
 	static override id = 'idle'
 
-	override onPointerDown: TLEventHandlers['onPointerDown'] = (info) => {
-		this.parent.transition('brushing', info)
+	override onPointerDown(info: TLPointerEventInfo) {
+		const { editor } = this
+
+		editor.selectNone()
+		this.parent.transition('lassoing', info)
 	}
 }
 
-export class WandBrushing extends StateNode {
-	static override id = 'brushing'
+export class WandLassoing extends StateNode {
+	static override id = 'lassoing'
 
-	override onEnter = () => {
-		this.editor.setCursor({ type: 'cross', rotation: 0 })
+	info = {} as TLPointerEventInfo
+
+	markId = null as null | string
+
+	override onEnter(info: TLPointerEventInfo) {
+		lassoPointsAtom.set([])
+		this.markId = null
+		this.info = info
+
+		this.startLasso()
 	}
 
-	override onPointerMove: TLEventHandlers['onPointerMove'] = () => {
-		// Visual feedback could be added here (e.g. drawing a selection box)
+	private startLasso() {
+		this.markId = this.editor.markHistoryStoppingPoint('lasso start')
 	}
 
-	override onPointerUp: TLEventHandlers['onPointerUp'] = async () => {
+	override onPointerMove(): void {
+		this.addPointToLasso()
+	}
+
+	private addPointToLasso() {
 		const { inputs } = this.editor
-		const { originPagePoint, currentPagePoint } = inputs
-        
-        const box = {
-            x: Math.min(originPagePoint.x, currentPagePoint.x),
-            y: Math.min(originPagePoint.y, currentPagePoint.y),
-            w: Math.abs(originPagePoint.x - currentPagePoint.x),
-            h: Math.abs(originPagePoint.y - currentPagePoint.y),
-        }
 
-        // Trigger the AI action
-        console.log('Wand selection:', box)
-        
-        // Call the API
-        try {
-            const response = await fetch('/api/ai', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ selection: box })
-            });
-            const data = await response.json();
-            console.log('AI Response:', data);
-            
-            // Create a text shape with the result
-            if (data.classification === 'math') {
-                this.editor.createShape({
-                    type: 'text',
-                    x: box.x + box.w + 20,
-                    y: box.y,
-                    props: { text: data.latex_content }
-                })
-            }
-        } catch (e) {
-            console.error("AI Error", e)
-        }
+		const { x, y, z } = inputs.currentPagePoint.toFixed()
+		const newPoint = { x, y, z }
 
-		this.parent.transition('idle')
+		lassoPointsAtom.set([...lassoPointsAtom.get(), newPoint])
 	}
-}
 
-export class WandTool extends StateNode {
-	static override id = 'wand'
-	static override initial = 'idle'
-	static override children = () => [WandIdle, WandBrushing]
+	private getShapesInLasso() {
+		const { editor } = this
 
-    override onEnter = () => {
-		this.editor.setCursor({ type: 'cross', rotation: 0 })
+		const shapes = editor.getCurrentPageRenderingShapesSorted()
+		const lassoPoints = lassoPointsAtom.get()
+		const shapesInLasso = shapes.filter((shape) => {
+			return this.doesLassoFullyContainShape(lassoPoints, shape)
+		})
+
+		return shapesInLasso
+	}
+
+	private doesLassoFullyContainShape(lassoPoints: VecModel[], shape: TLShape): boolean {
+		const { editor } = this
+
+		const geometry = editor.getShapeGeometry(shape)
+		const pageTransform = editor.getShapePageTransform(shape)
+		const shapeVertices = pageTransform.applyToPoints(geometry.vertices)
+
+		const allVerticesInside = shapeVertices.every((vertex) => {
+			return pointInPolygon(vertex, lassoPoints)
+		})
+
+		// Early return if any vertex is not inside the lasso
+		if (!allVerticesInside) {
+			return false
+		}
+
+		// If any shape edges intersect with the lasso, then we know it can't be fully contained by the lasso
+		if (geometry.isClosed) {
+			if (polygonsIntersect(shapeVertices, lassoPoints)) {
+				return false
+			}
+		}
+
+		return true
+	}
+
+	override onPointerUp(): void {
+		this.complete()
+	}
+
+	override onComplete() {
+		this.complete()
+	}
+
+	async complete() {
+		const { editor } = this
+
+		const shapesInLasso = this.getShapesInLasso()
+        
+        // Calculate bounding box of the lasso for the AI context
+        const lassoPoints = lassoPointsAtom.get()
+        if (lassoPoints.length > 0) {
+            const xs = lassoPoints.map(p => p.x)
+            const ys = lassoPoints.map(p => p.y)
+            const minX = Math.min(...xs)
+            const maxX = Math.max(...xs)
+            const minY = Math.min(...ys)
+            const maxY = Math.max(...ys)
+
+            const selection = {
+                x: minX,
+                y: minY,
+                w: maxX - minX,
+                h: maxY - minY
+            }
+
+            // Capture the canvas region as PNG
+            let imageDataUrl = null;
+            try {
+                // Use the editor's toImageDataUrl method to export the current page as PNG
+                imageDataUrl = await editor.toImageDataUrl(
+                    [...editor.getCurrentPageShapeIds()],
+                    {
+                        format: 'png',
+                        background: true,
+                        padding: 10,
+                        scale: 1
+                    }
+                );
+            } catch (error) {
+                console.error('Failed to capture canvas:', error);
+            }
+
+            // Dispatch event for ChatSidebar
+            const event = new CustomEvent('wand-selection', {
+                detail: {
+                    selection,
+                    image: imageDataUrl
+                }
+            });
+            window.dispatchEvent(event);
+        }
+
+        // Clear the lasso points
+        lassoPointsAtom.set([]);
+
+        // Select the shapes as well, so the user sees what was captured
+		editor.setSelectedShapes(shapesInLasso)
+
+		editor.setCurrentTool('select')
 	}
 }

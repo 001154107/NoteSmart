@@ -3,6 +3,7 @@
 import { Tldraw, useEditor, Editor } from "tldraw";
 import "tldraw/tldraw.css";
 import { WandTool } from "./WandTool";
+import { LassoOverlay } from "./LassoOverlay";
 
 const customTools = [WandTool];
 
@@ -109,6 +110,9 @@ export default function Canvas() {
         onMount={(editor: Editor) => {
             // Initial setup if needed
             // editor.setCurrentTool('wand') // Optional: start with wand
+        }}
+        components={{
+          InFrontOfTheCanvas: LassoOverlay
         }}
       >
         <CustomToolbar />
