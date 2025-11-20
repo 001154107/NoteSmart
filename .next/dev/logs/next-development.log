@@ -1,0 +1,910 @@
+[00:00:01.206] Server  LOG      ✓ Ready in 846ms
+[00:00:16.749] Server  LOG      ○ Compiling / ...
+[00:00:17.838] Server  ERROR    ⨯ ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+
+./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+[00:00:18.925] Browser ERROR   uncaughtError: Error: ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:00:19.155] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:19.155] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:00:19.155] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:00:19.155] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:19.155] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:00:19.156] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:00:19.409] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:19.409] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:00:19.409] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:29.800] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:29.800] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:02:29.800] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:30.484] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:30.484] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:02:30.484] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:30.484] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:30.484] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:02:30.484] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:30.654] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:30.654] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module 'autoprefixer'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:02:30.655] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:32.991] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:48.666] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:48.666] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:49.653] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:49.654] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:50.292] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:50.815] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:54.988] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:56.865] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:57.284] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:02:57.438] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:37.683] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:37.852] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:38.398] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:03:38.398] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:03:38.398] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:45.326] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:03:45.326] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:03:45.326] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:47.765] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:03:47.765] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:03:47.765] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:47.765] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:03:47.765] Browser ERROR   ./node_modules/tldraw/tldraw.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- D:\NoteSmart\.next\dev\build\chunks\[root-of-the-server]__6d51cb5d._.js
+- D:\NoteSmart\.next\dev\build\chunks\[turbopack]_runtime.js
+- D:\NoteSmart\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)]
+    [at Module._load (node:internal/modules/cjs/loader:985:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1235:19)]
+    [at require (node:internal/modules/helpers:176:18)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:49:25)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/tldraw/tldraw.css [Client Component Browser]
+    ./components/Canvas.tsx [Client Component Browser]
+    ./components/Canvas.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:03:47.765] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:53.442] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:57.280] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:58.450] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:59.028] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:03:59.569] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:04:03.860] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:04:05.708] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:04:06.235] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[00:04:06.360] Browser ERROR   ./app/page.tsx:3:16
+Ecmascript file had an error
+  1 | import dynamic from "next/dynamic";
+  2 |
+> 3 | const Canvas = dynamic(() => import("../components/Canvas"), { ssr: false });
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Home() {
+  6 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.

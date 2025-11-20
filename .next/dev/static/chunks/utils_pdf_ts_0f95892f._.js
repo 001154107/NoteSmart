@@ -1,0 +1,8 @@
+(globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
+    script: typeof document === "object" ? document.currentScript : undefined,
+    chunks: [
+  "static/chunks/node_modules_pdfjs-dist_build_pdf_mjs_3d65fee8._.js",
+  "static/chunks/utils_pdf_ts_ce7b8475._.js"
+],
+    source: "dynamic"
+});

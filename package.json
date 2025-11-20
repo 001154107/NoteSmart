@@ -1,0 +1,30 @@
+{
+  "name": "notesmart",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.3",
+    "postcss": "^8.5.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.22",
+    "next": "^16.0.3",
+    "pdfjs-dist": "^5.4.394",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^3.4.1",
+    "tldraw": "^4.2.0",
+    "yjs": "^13.6.27"
+  }
+}

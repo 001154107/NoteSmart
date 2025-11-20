@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/NoteSmart/app/page.tsx"],"sourcesContent":["import dynamic from \"next/dynamic\";\r\n\r\nconst Canvas = dynamic(() => import(\"../components/Canvas\"), { ssr: false });\r\n\r\nexport default function Home() {\r\n  return (\r\n    <main className=\"tldraw-canvas-container\">\r\n      <Canvas />\r\n    </main>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;;AAEA,MAAM,SAAS,IAAA,0KAAO,EAAC;;;;;;IAAwC,KAAK;;AAErD,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;kBACd,cAAA,8OAAC;;;;;;;;;;AAGP"}}]
+}
